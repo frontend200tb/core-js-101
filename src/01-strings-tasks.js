@@ -207,10 +207,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const firstLine = '┌' + '─'.repeat(width - 2) + '┐\n';
-  let middleLine = '│' + ' '.repeat(width - 2) + '│\n';
-  const lastLine = '└' + '─'.repeat(width - 2) + '┘\n';
-  for (let i = 3; i < height; i++) {
+  const firstLine = `┌${'─'.repeat(width - 2)}┐\n`;
+  let middleLine = `│${' '.repeat(width - 2)}│\n`;
+  const lastLine = `└${'─'.repeat(width - 2)}┘\n`;
+  for (let i = 3; i < height; i += 1) {
     middleLine += middleLine;
   }
   if (height === 2) {
@@ -238,7 +238,7 @@ function getRectangleString(width, height) {
  */
 function encodeToRot13(str) {
   let newStr = '';
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     if ((str.charCodeAt(i)) > 64 && (str.charCodeAt(i)) < 78) {
       newStr += String.fromCharCode(str.charCodeAt(i) + 13);
     } else if ((str.charCodeAt(i)) > 77 && (str.charCodeAt(i)) < 91) {
