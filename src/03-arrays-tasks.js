@@ -58,8 +58,8 @@ function generateOdds(len) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+function doubleArray(arr) {
+  return [...arr, ...arr];  // как элегантно я решил! краткость сестра таланта. Сам себя не похвалишь...
 }
 
 
