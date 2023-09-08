@@ -598,11 +598,9 @@ function swapHeadAndTail(arr) {
   if (num > 1) {
     const begin = arr.splice(0, Math.floor(num / 2));
     const end = arr.splice(-Math.floor(num / 2));
-    console.log('begin', begin, 'end', end, 'arr', arr);
     arr.push(...begin);
     arr.unshift(...end);
   }
-  console.log('arr', arr);
   return arr;
 }
 
